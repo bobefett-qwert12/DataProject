@@ -8,9 +8,38 @@
 
 import UIKit
 
-class DataViewController: UITableViewController {
+public class DataViewController: UITableViewController {
 
-    override func viewDidLoad() {
+    lazy var bucketList : [BucketItem] =
+    {
+        return loadBucketListFromFile()
+    }()
+    
+    private func loadBucketListFromFile() -> [BucketItem]
+    {
+        var items = [BucketItem]()
+        do
+        {
+            if let filePath = Bundle.main.url(forResource: "bucket18", withExtension: "csv")
+            {
+                let input = try String(contentsOf: filePath)
+                let bucketLines = input.components(separatedBy: "\n")
+                for line in bucketLines
+                {
+                    let item = line.components(separatedBy: ",")
+                    items.append(BucketItem(contents: item[0], author: item[1]))
+                }
+            }
+        }
+        catch
+        {
+            print("File load error")
+        }
+        
+        return items
+    }
+    
+    override public func viewDidLoad() -> Void{
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -22,25 +51,26 @@ class DataViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    override public func numberOfSections(in tableView: UITableView) -> Int
+    {
+        return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return bucketList.count
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+    
+    override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "dataIdentifier", for: indexPath) as! BucketItemCell
 
-        // Configure the cell...
+        cell.currentBucketItem = bucketList[indexPath.row]
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
