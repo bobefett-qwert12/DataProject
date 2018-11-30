@@ -11,10 +11,10 @@
 		8B0606B321AC48E800F6791D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0606B121AC48E800F6791D /* Main.storyboard */; };
 		8B0606B521AC48EB00F6791D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B0606B421AC48EB00F6791D /* Assets.xcassets */; };
 		8B0606B821AC48EB00F6791D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0606B621AC48EB00F6791D /* LaunchScreen.storyboard */; };
-		8B46869421B1853A00545BB9 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B46869321B1853A00545BB9 /* DataViewController.swift */; };
-		8B46869621B1860400545BB9 /* BucketItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B46869521B1860400545BB9 /* BucketItemCell.swift */; };
 		8B46869821B1864800545BB9 /* BucketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B46869721B1864800545BB9 /* BucketItem.swift */; };
 		8B46869A21B186D700545BB9 /* bucket18.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8B46869921B186D700545BB9 /* bucket18.csv */; };
+		8B46869C21B18DC100545BB9 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B46869B21B18DC100545BB9 /* DataViewController.swift */; };
+		8B46869E21B18DF000545BB9 /* BucketItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B46869D21B18DF000545BB9 /* BucketItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +24,10 @@
 		8B0606B421AC48EB00F6791D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B0606B721AC48EB00F6791D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B0606B921AC48EB00F6791D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B46869321B1853A00545BB9 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		8B46869521B1860400545BB9 /* BucketItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketItemCell.swift; sourceTree = "<group>"; };
 		8B46869721B1864800545BB9 /* BucketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketItem.swift; sourceTree = "<group>"; };
 		8B46869921B186D700545BB9 /* bucket18.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bucket18.csv; sourceTree = "<group>"; };
+		8B46869B21B18DC100545BB9 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		8B46869D21B18DF000545BB9 /* BucketItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +99,8 @@
 		8B46869221B1850E00545BB9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8B46869521B1860400545BB9 /* BucketItemCell.swift */,
-				8B46869321B1853A00545BB9 /* DataViewController.swift */,
+				8B46869B21B18DC100545BB9 /* DataViewController.swift */,
+				8B46869D21B18DF000545BB9 /* BucketItemCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -177,10 +177,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B46869E21B18DF000545BB9 /* BucketItemCell.swift in Sources */,
 				8B46869821B1864800545BB9 /* BucketItem.swift in Sources */,
-				8B46869621B1860400545BB9 /* BucketItemCell.swift in Sources */,
+				8B46869C21B18DC100545BB9 /* DataViewController.swift in Sources */,
 				8B0606AE21AC48E800F6791D /* AppDelegate.swift in Sources */,
-				8B46869421B1853A00545BB9 /* DataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
