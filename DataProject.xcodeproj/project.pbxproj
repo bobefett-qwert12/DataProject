@@ -60,10 +60,10 @@
 		8B0606AC21AC48E700F6791D /* DataProject */ = {
 			isa = PBXGroup;
 			children = (
-				8B0606C121AC495C00F6791D /* Resources */,
 				8B0606C021AC494F00F6791D /* Model */,
-				8B0606BF21AC493900F6791D /* View */,
 				8B46869221B1850E00545BB9 /* Controller */,
+				8B0606C121AC495C00F6791D /* Resources */,
+				8B0606BF21AC493900F6791D /* View */,
 			);
 			path = DataProject;
 			sourceTree = "<group>";
@@ -99,8 +99,8 @@
 		8B46869221B1850E00545BB9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8B46869321B1853A00545BB9 /* DataViewController.swift */,
 				8B46869521B1860400545BB9 /* BucketItemCell.swift */,
+				8B46869321B1853A00545BB9 /* DataViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
